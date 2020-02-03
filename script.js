@@ -29,8 +29,8 @@ let isDrawing = false,
     isDrawingLine = false;
     ischeckedRect = false;
     ischeckedCircle = false;
-let lastX = 0; //pozycja startowa X
-let lastY = 0; //pozycja startowa Y
+let lastX = 0; // INITIAL X POSITION
+let lastY = 0; //INITIAL Y POSITION
 
 let [startX,startY,endX,endY,rectHeight,rectWidth,radius] = [0,0,0,0,0,0,0]; //Definition of geometries variables
 
@@ -217,6 +217,7 @@ function drawCircle() {
         radius = Math.sqrt(Math.pow((endX - startX),2) + Math.pow((endY - startY),2));
         console.log(radius);
         ctx.strokeStyle = color;
+        ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(startX,startY,radius,0,2 * Math.PI);
         if (ischeckedCircle == true) ctx.fill();
