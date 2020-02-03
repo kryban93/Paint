@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>My Canvas Challenge</title>
+    
+</head>
+<body>
+    <div id="container">        
+        <canvas id="draw" width="1000px" height="600px"></canvas>
+
+        <div id="accordion-menu">
+            
+                <div class="panelHeader">
+                    <h3>Main Tools</h3>
+                </div>
+                <div class="panelContent">
+                    <div class="panelText">                        
+                        <input type="button" id="pencil" name="pencil" value="Pencil" /> 
+                        <div>
+                            <label for="size">Size</label>
+                            <input type="range" id="lineSize" min="1" max="200" value="2" name="size" data-sizing="rem"/>
+                        </div>  
+                        <div>   
+                            <label for="lineColor">Color</label>
+                            <input type="color" id="lineColor" name="lineColor" value="#BADA55" />  
+                        </div>    
+                        <div>
+                            <label for="bgcolor">Background Color</label>
+                            <input type="color" id="bgColor" name="bgColor" value="#ffffff" />    
+                        </div>
+                    </div>
+                </div>                
+
+                <div class="panelHeader">
+                    <h3>Draw Geometry</h3>
+                </div>
+                <div class=panelContent>
+                    <div class="panelText">
+                    <input type="button" id="drawLine" name="drawLine" value="Draw Line" /> 
+                    <div>
+                    <input type="button" id="drawRect" name="drawRect" value="Draw rectangle" /> 
+                    <input type="checkbox" id="checkboxRect" name="checkboxRect" value="Filled"/>                    
+                    </div>
+                    <div>                        
+                    <input type="button" id="drawCircle" name="drawCircle" value="Draw circle" />
+                    <input type="checkbox" id="checkboxCirc" name="checkboxCirc" value="Filled"/>
+                    </div>
+                    </div>
+                </div>   
+                <div class="panelHeader" id="clearSketch">
+                    <h3>Clear Sketch</h3>
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
